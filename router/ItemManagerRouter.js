@@ -8,11 +8,9 @@ module.exports = function(app){
 
     app.route('/categories/:categoryName')
     .delete(controller.RemoveCategory)
-    .put(controller.UpdateCategory);
-
-    app.route('/categories/:categoryName/')
-    .get(controller.GetItems)
+    .put(controller.UpdateCategory).get(controller.GetItems)
     .post(controller.AddItem);
+
 
     app.route('/categories/:categoryName/:itemName')
     .delete(controller.RemoveItem)
