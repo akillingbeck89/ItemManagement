@@ -19,6 +19,7 @@
   "homepage": "https://github.com/akillingbeck89/ItemManagement#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "express-ws": "^4.0.0",
     "promises": "^0.2.5"
   },
   "devDependencies": {

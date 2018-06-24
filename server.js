@@ -1,6 +1,7 @@
 var express = require("express"),
 app = express(),
 port = process.env.PORT || 3000,
+websocketPort = process.env.PORT + 1  || 3001,
 bodyParser = require('body-parser');
 
 var routing = require('./router/ItemManagerRouter');
@@ -12,6 +13,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
+
 
 routing(app);
 
